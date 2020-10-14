@@ -31,7 +31,6 @@ public class ShapeCollectorTestSuite {
             ShapeCollector shapeCollector = new ShapeCollector();
 
             //When
-            int listSizeBeforeAdd = shapeCollector.shapeList.size();
 
             shapeCollector.addFigure(new Circle("circle",1.6));
 
@@ -56,8 +55,6 @@ public class ShapeCollectorTestSuite {
             shapeCollector.addFigure(shape1);
             shapeCollector.addFigure(shape2);
             shapeCollector.addFigure(shape3);
-
-            int listSizeBeforeRemove = shapeCollector.shapeList.size();
 
             shapeCollector.removeFigure(shape2);
 
