@@ -38,7 +38,7 @@ public class ShapeCollectorTestSuite {
             int listSizeAfterAdd = shapeCollector.shapeList.size();
 
             //Then
-            Assertions.assertEquals(listSizeBeforeAdd, listSizeAfterAdd -1 );
+            Assertions.assertEquals(1, listSizeAfterAdd );
         }
     }
     @Nested
@@ -50,7 +50,7 @@ public class ShapeCollectorTestSuite {
             ShapeCollector shapeCollector = new ShapeCollector();
             Shape shape1 = new Circle("circle",1.6);
             Shape shape2 = new Square("square",2.9);
-            Shape shape3 = new Rectangle("rectangle",6.6);
+            Shape shape3 = new Rectangle("rectangle",6.6, 3.4);
 
             //When
             shapeCollector.addFigure(shape1);
@@ -64,7 +64,7 @@ public class ShapeCollectorTestSuite {
             int listSizeAfterRemove = shapeCollector.shapeList.size();
 
             //Then
-            Assertions.assertEquals(listSizeBeforeRemove -1,listSizeAfterRemove);
+            Assertions.assertEquals(2,listSizeAfterRemove);
         }
     }
     @Nested
@@ -76,7 +76,7 @@ public class ShapeCollectorTestSuite {
             ShapeCollector shapeCollector = new ShapeCollector();
             Shape shape1 = new Circle("circle",1.6);
             Shape shape2 = new Square("square",2.9);
-            Shape shape3 = new Rectangle("rectangle",6.6);
+            Shape shape3 = new Rectangle("rectangle",6.6, 5.6);
 
             //When
             shapeCollector.addFigure(shape1);
@@ -98,7 +98,7 @@ public class ShapeCollectorTestSuite {
             ShapeCollector shapeCollector = new ShapeCollector();
             Shape shape1 = new Circle("Circle",1.6);
             Shape shape2 = new Square("Square",2.9);
-            Shape shape3 = new Rectangle("Rectangle",6.6);
+            Shape shape3 = new Rectangle("Rectangle",6.6, 5.7);
 
             //When
             shapeCollector.addFigure(shape1);

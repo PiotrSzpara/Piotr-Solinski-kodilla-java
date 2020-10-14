@@ -2,15 +2,15 @@ package com.kodilla.testing.shape;
 
 public class Circle implements Shape{
     private String shapeName;
-    private double field;
+    private double radius;
 
-    public Circle(String shapeName, double field) {
+
+    public Circle(String shapeName, double radius) {
         this.shapeName = shapeName;
-        this.field = field;
+        this.radius = radius;
 
         shapeName = "Circle";
-        double r = 2.5;
-        field = 3.14 * r * r;
+
     }
 
     public String getShapeName(){
@@ -18,7 +18,7 @@ public class Circle implements Shape{
 
     }
     public double getField(){
-        return field;
+        return 3.14 * radius * radius;
 
     }
 }

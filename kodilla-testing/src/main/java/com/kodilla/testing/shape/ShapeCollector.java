@@ -18,7 +18,7 @@ public class ShapeCollector {
 
         Shape shape1 = new Circle("Circle", 38.9);
         Shape shape2 = new Square("Square", 43.6);
-        Shape shape3 = new Rectangle("Rectangle", 35.8);
+        Shape shape3 = new Rectangle("Rectangle", 35.9,3.8);
 
         addFigure(shape1);
         addFigure(shape2);

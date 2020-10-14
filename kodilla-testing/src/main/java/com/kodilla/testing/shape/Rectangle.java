@@ -2,18 +2,19 @@ package com.kodilla.testing.shape;
 
 public class Rectangle implements Shape{
     private String shapeName;
-    private double field;
+    private double sideA;
+    private double sideB;
 
 
 
-    public Rectangle(String shapeName, double field) {
+    public Rectangle(String shapeName, double sideA, double sideB) {
         this.shapeName = shapeName;
-        this.field = field;
+        this.sideA = sideA;
+        this.sideB = sideB;
+
 
         shapeName = "Rectangle";
-        double a = 2.5;
-        double b = 2.5;
-        field = a * b;
+
     }
 
     public String getShapeName(){
@@ -21,7 +22,7 @@ public class Rectangle implements Shape{
 
     }
     public double getField(){
-        return field;
+        return sideA * sideB;
 
     }
 }
