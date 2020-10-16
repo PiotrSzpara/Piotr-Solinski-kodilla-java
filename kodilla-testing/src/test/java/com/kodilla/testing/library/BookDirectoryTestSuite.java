@@ -61,8 +61,7 @@ public class BookDirectoryTestSuite {
             // Given
             BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
             List<Book> resultListOf10Books = generateListOfNBooks(10);
-            when(libraryDatabaseMock.listBooksWithCondition(anyString()))
-            .thenReturn(resultListOf10Books);
+
             // When
             List<Book> theListOfBooks10 = bookLibrary.listBooksWithCondition("Na");
             // Then
