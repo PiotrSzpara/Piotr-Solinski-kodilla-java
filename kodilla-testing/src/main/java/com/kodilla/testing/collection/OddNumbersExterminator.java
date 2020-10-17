@@ -11,7 +11,7 @@ public class OddNumbersExterminator {
     }
 
     public List<Integer> exterminate(List<Integer> numbers){
-        for (int i=0; i<20; i++) {
+        for (int i=0; i<6; i++) {
             numbers.add(i);
         }
 
