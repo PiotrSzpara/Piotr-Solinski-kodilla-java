@@ -47,6 +47,7 @@ public class WeatherForecastTestSuite {
         //Given
 
 
+
         //When
         int quantityOfSensors = weatherForecast.calculateForecast().size();
 
