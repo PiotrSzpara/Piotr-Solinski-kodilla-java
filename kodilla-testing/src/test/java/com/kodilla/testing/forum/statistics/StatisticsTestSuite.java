@@ -192,22 +192,22 @@ public class StatisticsTestSuite {
             void testStatsFor100Users() {
                 // Given
                 StatisticExecutor statisticExecutor = new StatisticExecutor(statisticsMock);
-                List<String> listOf100Users = generateUsersList(100);
+                List<String> listOf100Users = generateUsersList(123);
                 when(statisticsMock.usersNames()).thenReturn(listOf100Users);
-                when(statisticsMock.postsCount()).thenReturn(10000);
-                when(statisticsMock.commentsCount()).thenReturn(100000);
+                when(statisticsMock.postsCount()).thenReturn(11235);
+                when(statisticsMock.commentsCount()).thenReturn(123543);
 
 
                 // When
                 statisticExecutor.calculateAdvStatistics(statisticsMock);
 
                 // Then
-                assertEquals(100, statisticExecutor.getUsersNumber());
-                assertEquals(10000, statisticExecutor.getPostsNumber());
-                assertEquals(100000, statisticExecutor.getCommentsNumber());
-                assertEquals(100, statisticExecutor.getAverageNumberOfPostsPerUser());
-                assertEquals(1000, statisticExecutor.getAverageNumberOfCommentsPerUser());
-                assertEquals(10, statisticExecutor.getAverageNumberOfCommentsPerPost());
+                assertEquals(123, statisticExecutor.getUsersNumber());
+                assertEquals(11235, statisticExecutor.getPostsNumber());
+                assertEquals(123543, statisticExecutor.getCommentsNumber());
+                assertEquals(91.34146341463415, statisticExecutor.getAverageNumberOfPostsPerUser());
+                assertEquals(1004.4146341463414, statisticExecutor.getAverageNumberOfCommentsPerUser());
+                assertEquals(10.996261682242991, statisticExecutor.getAverageNumberOfCommentsPerPost());
 
             }
 

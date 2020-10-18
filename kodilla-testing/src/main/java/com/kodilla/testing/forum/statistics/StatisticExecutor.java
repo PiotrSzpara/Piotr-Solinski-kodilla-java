@@ -42,12 +42,12 @@ public class StatisticExecutor {
 
         if (postsNumber == 0 || usersNumber == 0){
             averageNumberOfPostsPerUser = 0;
-        } else {averageNumberOfPostsPerUser = postsNumber/usersNumber;
+        } else {averageNumberOfPostsPerUser = (double) postsNumber/usersNumber;
         }
 
         if (commentsNumber == 0 || usersNumber == 0){
             averageNumberOfCommentsPerUser = 0;
-        } else { averageNumberOfCommentsPerUser = commentsNumber/usersNumber;
+        } else { averageNumberOfCommentsPerUser = (double) commentsNumber/usersNumber;
         }
 
         if (postsNumber == 0 || commentsNumber == 0 || usersNumber == 0){
