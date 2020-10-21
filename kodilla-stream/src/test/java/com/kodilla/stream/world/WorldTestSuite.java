@@ -1,9 +1,12 @@
 package com.kodilla.stream.world;
 
+import com.kodilla.stream.portfolio.Board;
+import com.kodilla.stream.portfolio.TaskList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
