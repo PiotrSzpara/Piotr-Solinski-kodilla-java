@@ -17,7 +17,9 @@ public class FirstChallenge {
         FirstChallenge firstChallenge = new FirstChallenge();
 
         try {
-            firstChallenge.divide(3, 0);
+            double result = firstChallenge.divide(3, 0);
+            System.out.println(result);
+
         } catch (ArithmeticException o) {
             System.out.println("Operation is not allowed");
         } finally {
