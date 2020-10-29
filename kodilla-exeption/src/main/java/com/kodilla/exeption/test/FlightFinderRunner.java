@@ -6,7 +6,7 @@ public class FlightFinderRunner {
 
         try {
             System.out.println("\nNew Searching ... ");
-            flightFinder.findFlight(new Flight("Warszawa", "Kraków"));
+            flightFinder.findFlight(new Flight("Warszawa", "Gdańsk"));
         } catch (RouteNotFoundException e){
             System.out.println("Error # : " + e);
         } finally {
@@ -16,6 +16,15 @@ public class FlightFinderRunner {
         try {
             System.out.println("\nNew Searching ... ");
             flightFinder.findFlight(new Flight("Kraków", "Wrocław"));
+
+        } catch (RouteNotFoundException e){
+            System.out.println("Error # : " + e);
+        } finally {
+            System.out.println("Find new flight");
+        }
+        try {
+            System.out.println("\nNew Searching ... ");
+            flightFinder.findFlight(new Flight("Warszawa", "New York"));
 
         } catch (RouteNotFoundException e){
             System.out.println("Error # : " + e);

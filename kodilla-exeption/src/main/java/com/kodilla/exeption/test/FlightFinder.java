@@ -14,16 +14,29 @@ public class FlightFinder {
         flights.put("Poznań", true);
         flights.put("Katowice", false);
 
-        for (Map.Entry<String, Boolean> flightsDeparture : flights.entrySet()) {
-            if (flightsDeparture.getValue() == false && flightsDeparture.getKey() == flight.getArrivalAirport()) {
+        Boolean departureKey = flights.get(flight.getDepartureAirport());
+        Boolean arrivalKey = flights.get(flight.getArrivalAirport());
+
+        if (departureKey == null || arrivalKey == null || !departureKey || !arrivalKey) {
+            System.out.println("Flight doesn't exist");
+            throw new RouteNotFoundException();
+        }else {
+            System.out.println("Flight exist");
+        }
+
+
+
+       /* for (Map.Entry<String, Boolean> flightsDeparture : flights.entrySet()) {
+            if (!flightsDeparture.getValue() && flightsDeparture.getKey().equals(flight.getArrivalAirport())) {
                 System.out.println("Flight doesn't exist");
                 throw new RouteNotFoundException();
 
-            }else if(flightsDeparture.getValue() == true && flightsDeparture.getKey() == flight.getArrivalAirport()) {
+            }else if(flightsDeparture.getValue() && flightsDeparture.getKey().equals(flight.getArrivalAirport())) {
                 System.out.println("Flight exist");
 
+            }//else {
+                //System.out.println("Unknown destination!");
             }
-
-        }
+        }*/
     }
 }
