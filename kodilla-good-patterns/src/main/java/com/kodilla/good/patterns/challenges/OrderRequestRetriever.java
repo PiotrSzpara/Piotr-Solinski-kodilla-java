@@ -7,7 +7,7 @@ public class OrderRequestRetriever {
         User user1 = new User("Paul", "Novack", "Berlin");
 
 
-        LocalDateTime dateOfProductSale = LocalDateTime.of(2020, 11,23,12,32,02);
+        LocalDateTime dateOfProductSale = LocalDateTime.of(2020, 11,23,12,32, 2);
 
         return new OrderRequest(user1, "T-shirt - 09087", dateOfProductSale);
     }
