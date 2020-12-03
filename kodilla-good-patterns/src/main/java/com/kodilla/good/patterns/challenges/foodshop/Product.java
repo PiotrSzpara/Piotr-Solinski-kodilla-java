@@ -3,27 +3,20 @@ package com.kodilla.good.patterns.challenges.foodshop;
 import java.util.Objects;
 
 public class Product {
-    private String productName;
-    private Producer producer;
-    private double prize;
+    private final String productName;
+    private final double unitPrice;
 
-    public Product(String productName, Producer producer, double prize) {
+    public Product(String productName, double amount, double unitPrice) {
         this.productName = productName;
-        this.producer = producer;
-        this.prize = prize;
+        this.unitPrice = unitPrice;
     }
-
 
     public String getProductName() {
         return productName;
     }
 
-    public Producer getProducer() {
-        return producer;
-    }
-
-    public double getPrize() {
-        return prize;
+    public double getUnitPrice() {
+        return unitPrice;
     }
 
     @Override

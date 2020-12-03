@@ -3,17 +3,13 @@ package com.kodilla.good.patterns.challenges.foodshop;
 import java.time.LocalDateTime;
 
 public class OrderRequest {
-    private Customer customer;
-    private Product product;
-    private double productWeight;
-    private double productAmount;
-    private LocalDateTime dateOfSale;
+    private final Customer customer;
+    private final ShoppingList shoppingList;
+    private final LocalDateTime dateOfSale;
 
-    public OrderRequest(Customer customer, Product product, double productWeight, double productAmount, LocalDateTime dateOfSale) {
+    public OrderRequest(Customer customer, ShoppingList shoppingList, LocalDateTime dateOfSale) {
         this.customer = customer;
-        this.product = product;
-        this.productWeight = productWeight;
-        this.productAmount = productAmount;
+        this.shoppingList = shoppingList;
         this.dateOfSale = dateOfSale;
     }
 
@@ -21,16 +17,8 @@ public class OrderRequest {
         return customer;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public double getProductWeight() {
-        return productWeight;
-    }
-
-    public double getProductAmount() {
-        return productAmount;
+    public ShoppingList getShoppingList() {
+        return shoppingList;
     }
 
     public LocalDateTime getDateOfSale() {
