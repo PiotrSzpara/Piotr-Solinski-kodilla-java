@@ -1,27 +1,37 @@
 package com.kodilla.good.patterns.challenges.foodshop;
 
-import java.time.LocalDateTime;
-
 public class OrderRequest {
-    private final Customer customer;
-    private final ShoppingList shoppingList;
-    private final LocalDateTime dateOfSale;
+    private final Shop shop;
+    private final Product product;
+    private final int quantity;
 
-    public OrderRequest(Customer customer, ShoppingList shoppingList, LocalDateTime dateOfSale) {
-        this.customer = customer;
-        this.shoppingList = shoppingList;
-        this.dateOfSale = dateOfSale;
+    public OrderRequest(Shop shop, Product product, int quantity) {
+        this.shop = shop;
+        this.product = product;
+        this.quantity = quantity;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Shop getShop() {
+        return shop;
     }
 
-    public ShoppingList getShoppingList() {
-        return shoppingList;
+    public Product getProduct() {
+        return product;
     }
 
-    public LocalDateTime getDateOfSale() {
-        return dateOfSale;
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderRequest{" +
+                "shop=" + shop +
+                ", product=" + product +
+                ", quantity=" + quantity +
+                '}';
     }
 }
+
+
+
