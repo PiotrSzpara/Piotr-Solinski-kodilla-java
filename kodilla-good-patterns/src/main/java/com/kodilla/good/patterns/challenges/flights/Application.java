@@ -14,7 +14,7 @@ public class Application {
         flightFrom.findFlightFrom(newSet, "Warsaw");
 
         FlightFinder flightFromToWithTrough = new FlightFinder();
-        flightFromToWithTrough.findFlightThrough(newSet, "Krakow", "Wroclaw");
+        flightFromToWithTrough.findFlightThrough(newSet, "Krakow", "Warsaw");
 
     }
 }

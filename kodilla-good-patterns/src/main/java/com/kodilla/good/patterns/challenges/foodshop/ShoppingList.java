@@ -8,6 +8,8 @@ public class ShoppingList {
 
 
     public Map<String, Double> getShoppingList() {
+        productList = new ProductList();
+
         Map<String, Double> shoppingList = new HashMap<>();
         double appleWeight = 1.2;
         shoppingList.put(productList.getApple().getProductName(),

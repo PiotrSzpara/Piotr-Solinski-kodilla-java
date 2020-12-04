@@ -13,7 +13,7 @@ public class FlightSet {
         flights.add(new Flight("Krakow", "Poznan","A524"));
         flights.add(new Flight("Wroclaw", "Poznan","A299"));
         flights.add(new Flight("Warsaw", "Katowice","A738"));
-        flights.add(new Flight("Katowice", "Gdansk","A053"));
+        flights.add(new Flight("Katowice", "Warsaw","A053"));
         flights.add(new Flight("Krakow", "Wroclaw","A982"));
         flights.add(new Flight("Katowice", "Wroclaw","A398"));
         flights.add(new Flight("Krakow", "Katowice","A424"));
