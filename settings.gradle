@@ -5,6 +5,7 @@ include 'kodilla-exeption'
 include 'kodilla-good-patterns'
 include 'kodilla-spring-intro'
 include 'kodilla-spring-main'
+include 'kodilla-spring-web'
 
 
 
