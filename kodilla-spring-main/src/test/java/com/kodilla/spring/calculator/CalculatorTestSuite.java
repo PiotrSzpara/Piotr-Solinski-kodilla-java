@@ -24,9 +24,9 @@ class CalculatorTestSuite {
         double div = calculator.div(8.2,4.3);
 
         //Then
-        Assert.assertEquals(9.7, add, 1);
-        Assert.assertEquals(3.1, sub,1);
-        Assert.assertEquals(7.7, mul, 1);
-        Assert.assertEquals(1.9, div,1);
+        Assert.assertEquals(9.7, add,0);
+        Assert.assertEquals(3.1, sub,0.001);
+        Assert.assertEquals(7.7, mul, 0.001);
+        Assert.assertEquals(1.906, div,0.001);
     }
 }
