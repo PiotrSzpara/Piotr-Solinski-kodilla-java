@@ -12,12 +12,17 @@ public final class Board extends Prototype<Board>{
     public Board(String name) {
         this.name = name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setLists(Set<TasksList> lists) {
+        this.lists = lists;
     }
 
     public Set<TasksList> getLists() {
