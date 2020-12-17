@@ -2,8 +2,7 @@ package com.kodilla.patterns.factory.tasks;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TaskFactoryTestSuite {
     @Test
@@ -13,11 +12,10 @@ public class TaskFactoryTestSuite {
         //When
 
         Task shopping = factory.makeTask(TaskFactory.SHOPPING_TASK);
-        if (shopping != null) {
-            shopping.executeTask();
-        }
+        shopping.executeTask();
+
         //Then
-        assert shopping != null;
+        assertNotNull(shopping);
         assertTrue(shopping.isTaskExecuted());
         assertEquals("SHOPPING TASK", shopping.getTaskName());
 
@@ -30,11 +28,10 @@ public class TaskFactoryTestSuite {
         //When
 
         Task painting = factory.makeTask(TaskFactory.PAINTING_TASK);
-        if (painting != null) {
-            painting.executeTask();
-        }
+        painting.executeTask();
+
         //Then
-        assert painting != null;
+        assertNotNull(painting);
         assertTrue(painting.isTaskExecuted());
         assertEquals("PAINTING TASK", painting.getTaskName());
     }
@@ -46,11 +43,10 @@ public class TaskFactoryTestSuite {
         //When
 
         Task driving = factory.makeTask(TaskFactory.DRIVING_TASK);
-        if (driving != null) {
-            driving.executeTask();
-        }
+        driving.executeTask();
+
         //Then
-        assert driving != null;
+        assertNotNull(driving);
         assertTrue(driving.isTaskExecuted());
         assertEquals("DRIVING TASK", driving.getTaskName());
     }
