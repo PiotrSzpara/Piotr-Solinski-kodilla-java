@@ -27,8 +27,10 @@ public class BigmacTestSuite {
 
         //Then
         assertNotNull(chosenBun);
+        assertEquals("with sesame", chosenBun);
         assertEquals(3, howManyBurgers);
         assertNotNull(chosenSauce);
+        assertEquals("barbecue", chosenSauce);
         assertEquals(4, howManyIngredients);
     }
 }
