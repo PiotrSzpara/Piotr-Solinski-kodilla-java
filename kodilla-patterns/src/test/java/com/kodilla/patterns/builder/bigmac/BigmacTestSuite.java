@@ -3,7 +3,6 @@ package com.kodilla.patterns.builder.bigmac;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class BigmacTestSuite {
     @Test
@@ -26,10 +25,8 @@ public class BigmacTestSuite {
         int howManyIngredients = bigmac.getIngredients().size();
 
         //Then
-        assertNotNull(chosenBun);
         assertEquals("with sesame", chosenBun);
         assertEquals(3, howManyBurgers);
-        assertNotNull(chosenSauce);
         assertEquals("barbecue", chosenSauce);
         assertEquals(4, howManyIngredients);
     }
