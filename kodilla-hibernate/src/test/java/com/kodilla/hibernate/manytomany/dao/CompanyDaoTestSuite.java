@@ -71,51 +71,21 @@ public class CompanyDaoTestSuite {
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
         Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
 
-        Company softwareMachine = new Company("Software Machine");
-        Company dataMaesters = new Company("Data Maesters");
-        Company greyMatter = new Company("Grey Matter");
-
-        softwareMachine.getEmployees().add(johnSmith);
-        dataMaesters.getEmployees().add(stephanieClarckson);
-        dataMaesters.getEmployees().add(lindaKovalsky);
-        greyMatter.getEmployees().add(johnSmith);
-        greyMatter.getEmployees().add(lindaKovalsky);
-
-        johnSmith.getCompanies().add(softwareMachine);
-        johnSmith.getCompanies().add(greyMatter);
-        stephanieClarckson.getCompanies().add(dataMaesters);
-        lindaKovalsky.getCompanies().add(dataMaesters);
-        lindaKovalsky.getCompanies().add(greyMatter);
-
-
-        companyDao.save(softwareMachine);
-        int softwareMachineId = softwareMachine.getId();
-        companyDao.save(dataMaesters);
-        int dataMaestersId = dataMaesters.getId();
-        companyDao.save(greyMatter);
-        int greyMatterId = greyMatter.getId();
+        employeeDao.save(johnSmith);
+        int johnSmithId = johnSmith.getId();
+        employeeDao.save(stephanieClarckson);
+        int stephanieClarcksonId = stephanieClarckson.getId();
+        employeeDao.save(lindaKovalsky);
+        int lindaKovalskynId = lindaKovalsky.getId();
 
         //When
-
         List<Employee> employeeWithLastname = employeeDao.retrieveEmployeeLastname("Smith");
 
-
         //Then
-
         assertEquals(1, employeeWithLastname.size());
 
-
         //CleanUp
-
-
-
-
-      try {
-          companyDao.deleteAll();
-          employeeDao.deleteAll();
-          companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
+        try {
             employeeDao.deleteById(johnSmith.getId());
             employeeDao.deleteById(stephanieClarckson.getId());
             employeeDao.deleteById(lindaKovalsky.getId());
@@ -126,26 +96,9 @@ public class CompanyDaoTestSuite {
     @Test
     void testNamedQueries2() {
         //Given
-        Employee johnSmith = new Employee("John", "Smith");
-        Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
-
         Company softwareMachine = new Company("Software Machine");
         Company dataMaesters = new Company("Data Maesters");
         Company greyMatter = new Company("Grey Matter");
-
-        softwareMachine.getEmployees().add(johnSmith);
-        dataMaesters.getEmployees().add(stephanieClarckson);
-        dataMaesters.getEmployees().add(lindaKovalsky);
-        greyMatter.getEmployees().add(johnSmith);
-        greyMatter.getEmployees().add(lindaKovalsky);
-
-        johnSmith.getCompanies().add(softwareMachine);
-        johnSmith.getCompanies().add(greyMatter);
-        stephanieClarckson.getCompanies().add(dataMaesters);
-        lindaKovalsky.getCompanies().add(dataMaesters);
-        lindaKovalsky.getCompanies().add(greyMatter);
-
 
         companyDao.save(softwareMachine);
         int softwareMachineId = softwareMachine.getId();
@@ -157,24 +110,15 @@ public class CompanyDaoTestSuite {
         //When
         List<Company> companiesWith3FirstLettersOfName = companyDao.retrieveCompaniesWith3FirstLettersOfName("Dat");
 
-
-
         //Then
-
         assertEquals(1, companiesWith3FirstLettersOfName.size());
 
         //CleanUp
-
-
-
-
         try {
             companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
             companyDao.deleteById(greyMatterId);
-            employeeDao.deleteById(johnSmith.getId());
-            employeeDao.deleteById(stephanieClarckson.getId());
-            employeeDao.deleteById(lindaKovalsky.getId());
+
         } catch (Exception e) {
             //do nothing
         }
