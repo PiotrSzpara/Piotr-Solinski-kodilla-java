@@ -6,10 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.retrieveCompaniesWith3FirstLettersOfName",
+        name = "Company.retrieveCompaniesName",
         query = "SELECT * FROM COMPANIES" +
-                " WHERE LEFT(COMPANY_NAME, 3) = :NAME ",
-        resultClass = Company.class
+                " WHERE COMPANY_NAME LIKE CONCAT('%', :NAME , '%')"
 )
 @Entity
 @Table(name = "COMPANIES")
